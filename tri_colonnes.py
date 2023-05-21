@@ -1,8 +1,4 @@
-import csv
-fichier_csv_entree = "C:/Users/sarra/Desktop/dc4 git/nettoyage-fichier-sarra-mimouni/test.csv"
-fichier_csv_sortie = "test_sortie.csv"
-
-colonnes_sélectionnees = [ "Period", "Data_value","Series_title_2"]
-
-with open(test_csv, 'r') as fichier_entree, open(fichier_csv_sortie, 'w', newline='') as fichier_sortie:
-    lecteur_csv = csv.reader
+import pandas as pd
+df = pd.read_csv("C:/Users/sarra/Desktop/dc4 git/nettoyage-fichier-sarra-mimouni/test.csv")
+df = df.drop(columns=['Series_reference','Suppressed','STATUS','UNITS','Subject','Group','Series_title_1','Series_title_3','Series_title_4','Series_title_5'])
+df.to_csv ("C:/Users/sarra/Desktop/dc4 git/nettoyage-fichier-sarra-mimouni/test_sortie.csv", index=False)
