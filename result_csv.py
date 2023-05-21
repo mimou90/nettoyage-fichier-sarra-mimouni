@@ -12,7 +12,6 @@ df = df.drop(columns=['Series_reference','Suppressed','STATUS','UNITS','Subject'
 df.to_csv ("C:/Users/sarra/Desktop/dc4 git/nettoyage-fichier-sarra-mimouni/result.csv", index=False)
 
 df['ID'] = range (1, len(df) + 1)
-print (df)
 
 print (df)
 
